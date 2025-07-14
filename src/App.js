@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css'
+import logo from './LOGO-CIT.png'
 
 function App() {
   const divStyle={
@@ -16,6 +17,7 @@ function App() {
     <div className='title'>
       React & React Native
     </div>
+    <img src={logo} width="10%" alt=""/>
     </>
   )
 }
