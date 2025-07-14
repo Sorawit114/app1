@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+
+h2{
+  font-size: 20px;
+  color: blue;
+}
+
+.title{
+  font-size: 16px;
+  color: green;
+  text-decoration: underline;
+}
+
+.divStyle{
+  color: red;
+  background-color: powderblue;
+  font-size: large;
+  padding: 3px;
+}
