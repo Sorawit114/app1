@@ -3,6 +3,7 @@ import './App.css'
 import logo from './LOGO-CIT.png'
 
 import {Header,Content,Footer} from './func-components.js'
+import Calendar from './class-component';
 
 function App() {
   const divStyle={
@@ -12,6 +13,7 @@ function App() {
     padding:'3px',
   }
   return (
+    
     /*
     <>
     <div style={divStyle}>Hello React(Inline css)</div>
@@ -24,7 +26,17 @@ function App() {
     <br/><br/><br/><br/><br/>
     </>
     */
+
+    /*
     [<Header/>,<Content/>,<Footer/>]
+    */
+
+    <>
+    <Header/>
+    <p><center><Calendar/></center></p>
+    <Content/>
+    <Footer/>
+    </>
   )
 }
 
