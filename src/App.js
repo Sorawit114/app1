@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css'
 import logo from './LOGO-CIT.png'
 
+import {Header,Content,Footer} from './func-components.js'
+
 function App() {
   const divStyle={
     color:'red',
@@ -10,15 +12,19 @@ function App() {
     padding:'3px',
   }
   return (
+    /*
     <>
     <div style={divStyle}>Hello React(Inline css)</div>
     <div className='divStyle'>Hello React(External css)</div>
-    <h2>DeveloperThai.com</h2>
+    <h1>DeveloperThai.com</h1>
     <div className='title'>
       React & React Native
     </div>
     <img src={logo} width="10%" alt=""/>
+    <br/><br/><br/><br/><br/>
     </>
+    */
+    [<Header/>,<Content/>,<Footer/>]
   )
 }
 
