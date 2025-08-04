@@ -7,6 +7,7 @@ import Calendar from './class-component';
 
 import Button from './class-component';
 import { Calculator2 }  from './calculator';
+import { Event }  from './event-data';
 
 function App() {
   const divStyle={
@@ -47,7 +48,11 @@ function App() {
     <Button/>
     */
 
+    /*
     <Calculator2/>
+    */
+   
+    <Event/>
   )
 }
 
