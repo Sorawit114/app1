@@ -5,6 +5,8 @@ import logo from './LOGO-CIT.png'
 import {Header,Content,Footer} from './func-components.js'
 import Calendar from './class-component';
 
+import Button from './class-component';
+
 function App() {
   const divStyle={
     color:'red',
@@ -31,12 +33,16 @@ function App() {
     [<Header/>,<Content/>,<Footer/>]
     */
 
+    /*
     <>
     <Header/>
     <p><center><Calendar/></center></p>
     <Content/>
     <Footer/>
     </>
+    */
+
+    <Button/>
   )
 }
 
