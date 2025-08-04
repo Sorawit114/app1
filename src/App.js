@@ -6,6 +6,7 @@ import {Header,Content,Footer} from './func-components.js'
 import Calendar from './class-component';
 
 import Button from './class-component';
+import { Calculator2 }  from './calculator';
 
 function App() {
   const divStyle={
@@ -42,7 +43,11 @@ function App() {
     </>
     */
 
+    /*
     <Button/>
+    */
+
+    <Calculator2/>
   )
 }
 
