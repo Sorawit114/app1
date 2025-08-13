@@ -9,6 +9,8 @@ import Button from './class-component';
 import { Calculator2 }  from './calculator';
 import { Event }  from './event-data';
 
+import RefsArray from './refs-array';
+
 function App() {
   const divStyle={
     color:'red',
@@ -51,8 +53,12 @@ function App() {
     /*
     <Calculator2/>
     */
-   
+
+    /*
     <Event/>
+    */
+
+    <RefsArray/>
   )
 }
 
