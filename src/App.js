@@ -10,6 +10,7 @@ import { Calculator2 }  from './calculator';
 import { Event }  from './event-data';
 
 import RefsArray from './refs-array';
+import MessageBox from './state-func';
 
 function App() {
   const divStyle={
@@ -58,7 +59,11 @@ function App() {
     <Event/>
     */
 
+    /*
     <RefsArray/>
+    */
+
+    <MessageBox/>
   )
 }
 
