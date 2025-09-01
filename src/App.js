@@ -1,70 +1,25 @@
-import React from 'react';
+import { createContext, useState } from "react";
+import Menu from "./component/Menu";
+import Quiz from "./component/Quiz";
+import Score from "./component/Score";
+
 import './App.css'
-import logo from './LOGO-CIT.png'
 
-import {Header,Content,Footer} from './func-components.js'
-import Calendar from './class-component';
-
-import Button from './class-component';
-import { Calculator2 }  from './calculator';
-import { Event }  from './event-data';
-
-import RefsArray from './refs-array';
-import MessageBox from './state-func';
+export const DataContext = createContext();
 
 function App() {
-  const divStyle={
-    color:'red',
-    backgroundColor:'powderblue',
-    fontSize:'larger',
-    padding:'3px',
-  }
+  const [appState, setAppState] = useState("menu");
+  const [score,setScore] = useState(0)
   return (
-    
-    /*
-    <>
-    <div style={divStyle}>Hello React(Inline css)</div>
-    <div className='divStyle'>Hello React(External css)</div>
-    <h1>DeveloperThai.com</h1>
-    <div className='title'>
-      React & React Native
-    </div>
-    <img src={logo} width="10%" alt=""/>
-    <br/><br/><br/><br/><br/>
-    </>
-    */
-
-    /*
-    [<Header/>,<Content/>,<Footer/>]
-    */
-
-    /*
-    <>
-    <Header/>
-    <p><center><Calendar/></center></p>
-    <Content/>
-    <Footer/>
-    </>
-    */
-
-    /*
-    <Button/>
-    */
-
-    /*
-    <Calculator2/>
-    */
-
-    /*
-    <Event/>
-    */
-
-    /*
-    <RefsArray/>
-    */
-
-    <MessageBox/>
-  )
+    <DataContext.Provider value={{ appState, setAppState, score, setScore}}>
+      <div className="App">
+        <h1> Web Development Quiz </h1>
+        {appState === "menu" && <Menu />}
+        {appState === "quiz" && <Quiz />}
+        {appState === "score" && <Score />}
+      </div>
+    </DataContext.Provider>
+  );
 }
 
 export default App;
