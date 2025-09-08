@@ -1,0 +1,17 @@
+.nav{
+    background-color: #ead6ff;
+    padding: 7px;
+    text-align: center;
+}
+
+.menu {
+    color: #c489ff;
+    text-decoration: none;
+    padding: 2px 5px;
+}
+
+.active_menu {
+    color: #9379c2;
+    text-decoration: none;
+    padding: 2px 5px;
+}
