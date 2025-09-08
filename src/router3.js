@@ -1,6 +1,11 @@
 import React from "react";
-import { BrowserRouter, NavLink } from "react-router-dom";
+import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
+
 import "./navlink.css";
+
+import Products from "./product";
+import Home from "./home";
+import Member from "./member";
 
 export default function Router2() {
   return (
@@ -21,11 +26,6 @@ export default function Router2() {
         <NavLink
           to="/products"
           className={({ isActive }) => (isActive ? "active_menu" : "menu")}
-          style={({ isActive }) => {
-            return {
-              fontWeight: isActive ? "bold" : "",
-            };
-          }}
         >
           Products
         </NavLink>{" "}
@@ -33,11 +33,6 @@ export default function Router2() {
         <NavLink
           to="/member"
           className={({ isActive }) => (isActive ? "active_menu" : "menu")}
-          style={({ isActive }) => {
-            return {
-              fontWeight: isActive ? "bold" : "",
-            };
-          }}
         >
           Member
         </NavLink>{" "}
@@ -45,24 +40,20 @@ export default function Router2() {
         <NavLink
           to="/contact"
           className={({ isActive }) => (isActive ? "active_menu" : "menu")}
-          style={({ isActive }) => {
-            return {
-              fontWeight: isActive ? "bold" : "",
-            };
-          }}
         >
           Contact Us
         </NavLink>
       </nav>
-      <div class="content">
-        <Route path="/" element={<h2> Welcome to my website </h2>} />
+      <Routes style={{ margin: "20px" }}>
+        <Route path="/" element = {<Home />} />
 
-        <Route path="/product" element={<Products />} />
+        <Route path="/products" element = {<Products />} />
 
-        <Route path="/member" element={<h2> Member</h2>} />
+        <Route path="/member" element = {<Member />} />
 
-        <Route path="/contact" element={<h2> Contact Us </h2>} />
-      </div>
+        <Route path="/contact" element = {<div style={{textAlign:'center'}}> Contact Page </div>} />
+        <Route path="/*" element = {<div style={{textAlign:'center'}}> Error 404 not Found </div>}/>
+      </Routes>
     </BrowserRouter>
   );
 }
