@@ -54,15 +54,7 @@ export default function Router2() {
           Contact Us
         </NavLink>
       </nav>
-      <div class = "content">
-        <Route path = "/" element = {<h2> Welcome to my website </h2>}/>
-
-        <Route path = "/product" element = {<Products/>}/>
-
-        <Route path = "/member" element = {<h2> Member</h2>}/>
-
-        <Route path = "/contact" element = {<h2> Contact Us </h2>}/>
-      </div>
+      
     </BrowserRouter>
   );
 }
